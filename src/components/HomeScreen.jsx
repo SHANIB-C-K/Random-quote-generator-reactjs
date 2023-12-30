@@ -11,8 +11,8 @@ const HomeScreen = () => {
   }
 
   const [quote, setQuote] = useState({
-    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed suscipit est rerum repellat vitae voluptatem excepturi magnam maiores perferendis accusamus deserunt quae in nostrum quod numquam eveniet eaque, vero culpa.",
-    author: "lorem",
+    text: "Self-complacency is fatal to progress.",
+    author: "Margaret Sangster",
   });
 
   const random = () => {
