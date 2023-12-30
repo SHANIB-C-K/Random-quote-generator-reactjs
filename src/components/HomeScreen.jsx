@@ -20,6 +20,14 @@ const HomeScreen = () => {
     setQuote(select);
   };
 
+  const twitter = () => {
+    window.open(
+      `https://twitter.com/intent/tweet?=${quote.text} - ${
+        quote.author.split(",")[0]
+      }`
+    );
+  };
+
   loadQuotes();
   return (
     <>
@@ -33,7 +41,7 @@ const HomeScreen = () => {
             <div className="h-[1.5px] bg-green-800 lg:w-[600px] w-[250px]"></div>
             <div className="flex flex-row items-center justify-between my-8 mx-0">
               <div className="text-[20px] text-white font-extrabold">
-                - {quote.author.split(',')[0]}
+                - {quote.author.split(",")[0]}
               </div>
               <div className="flex gap-[40px]">
                 <IoReloadCircleOutline
