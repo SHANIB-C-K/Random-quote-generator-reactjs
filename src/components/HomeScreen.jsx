@@ -4,7 +4,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const HomeScreen = () => {
   const [quote, setQuote] = useState({
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quasi voluptatibus nostrum autem animi mollitia quos repellendus, recusandae non quibusdam error deleniti, alias natus fugit libero veritatis aliquid sequi ratione?",
+    text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed suscipit est rerum repellat vitae voluptatem excepturi magnam maiores perferendis accusamus deserunt quae in nostrum quod numquam eveniet eaque, vero culpa.",
     author: "lorem",
   });
   return (
@@ -14,7 +14,7 @@ const HomeScreen = () => {
           <h1 className="lg:text-3xl text-2xl font-bold mt-5">
             Random Quot <span className="text-red-600">Generator</span>
           </h1>
-          <div className="lg:py-[110px] py-[55px] px-[15px]">{quote.text}</div>
+          <div className="lg:py-[90px] py-[45px] px-[15px]">{quote.text}</div>
           <div>
             <div className="h-[1.5px] bg-green-800 lg:w-[600px] w-[250px]"></div>
             <div className="flex flex-row items-center justify-between my-8 mx-0">
