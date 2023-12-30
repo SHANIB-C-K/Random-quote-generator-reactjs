@@ -22,7 +22,7 @@ const HomeScreen = () => {
 
   const twitter = () => {
     window.open(
-      `https://twitter.com/intent/tweet?=${quote.text} - ${
+      `https://twitter.com/intent/tweet?text=${quote.text} - ${
         quote.author.split(",")[0]
       }`
     );
@@ -50,7 +50,12 @@ const HomeScreen = () => {
                     random();
                   }}
                 />
-                <FaXTwitter className="cursor-pointer size-8" />
+                <FaXTwitter
+                  className="cursor-pointer size-8"
+                  onClick={() => {
+                    twitter();
+                  }}
+                />
               </div>
             </div>
           </div>
