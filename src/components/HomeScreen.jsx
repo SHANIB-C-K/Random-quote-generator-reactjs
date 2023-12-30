@@ -16,8 +16,8 @@ const HomeScreen = () => {
           </h1>
           <div className="sm:py-[110px] py-[55px] px-[15px]">{quote.text}</div>
           <div>
-            <div className=""></div>
-            <div className="bottom">
+            <div className="h-[1.5px] bg-green-800 sm:w-[600px] w-[250px]"></div>
+            <div className="flex flex-row items-center justify-between my-8 mx-0">
               <div className="author">{quote.author}</div>
               <div className="flex flex-row">
                 <IoReloadCircleOutline />
