@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { IoReloadCircleOutline } from "react-icons/io5";
+import { FaXTwitter } from "react-icons/fa6";
 
 const HomeScreen = () => {
   const [quote, setQuote] = useState({
@@ -14,12 +16,12 @@ const HomeScreen = () => {
           </h1>
           <div className="sm:py-[110px] py-[55px] px-[15px]">{quote.text}</div>
           <div>
-            <div className="line"></div>
+            <div className=""></div>
             <div className="bottom">
               <div className="author">{quote.author}</div>
-              <div className="icons">
-                <img src="" alt="" />
-                <img src="" alt="" />
+              <div className="flex flex-row">
+                <IoReloadCircleOutline />
+                <FaXTwitter />
               </div>
             </div>
           </div>
