@@ -8,11 +8,11 @@ const HomeScreen = () => {
   return (
     <>
       <div className="bg-gray-800 w-screen h-screen text-white flex flex-col justify-center items-center">
-        <div className="bg-black w-[800px] h-auto bg-opacity-50 rounded-2xl shadow-2xl shadow-blue-800 flex flex-col items-center justify-center m-auto">
-          <h1 className="text-2xl font-bold">
+        <div className="bg-black w-[310px] sm:w-[800px] bg-opacity-50 rounded-2xl shadow-2xl shadow-blue-800 flex flex-col items-center justify-center m-auto">
+          <h1 className="sm:text-3xl text-2xl font-bold mt-5">
             Random Quot <span className="text-red-600">Generator</span>
           </h1>
-          <div className="quote py-[110px] px-[15px]">{quote.text}</div>
+          <div className="sm:py-[110px] py-[55px] px-[15px]">{quote.text}</div>
           <div>
             <div className="line"></div>
             <div className="bottom">
