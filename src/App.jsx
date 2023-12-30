@@ -1,9 +1,10 @@
 import React from "react";
+import HomeScreen from "./components/HomeScreen";
 
 const App = () => {
   return (
     <>
-      <div>Hello there</div>
+      <HomeScreen />
     </>
   );
 };
