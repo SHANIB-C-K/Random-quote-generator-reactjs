@@ -3,10 +3,24 @@ import { IoReloadCircleOutline } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
 
 const HomeScreen = () => {
+  let quotes = [];
+
+  async function loadQuotes() {
+    const response = await fetch("https://type.fit/api/quotes");
+    quotes = await response.json();
+  }
+
   const [quote, setQuote] = useState({
     text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed suscipit est rerum repellat vitae voluptatem excepturi magnam maiores perferendis accusamus deserunt quae in nostrum quod numquam eveniet eaque, vero culpa.",
     author: "lorem",
   });
+
+  const random = () => {
+    const select = quotes[Math.floor(Math.random() * quotes.length)];
+    setQuote(select);
+  };
+
+  loadQuotes();
   return (
     <>
       <div className="bg-gray-800 w-screen h-screen text-white flex flex-col justify-center items-center">
@@ -19,10 +33,15 @@ const HomeScreen = () => {
             <div className="h-[1.5px] bg-green-800 lg:w-[600px] w-[250px]"></div>
             <div className="flex flex-row items-center justify-between my-8 mx-0">
               <div className="text-[20px] text-white font-extrabold">
-                {quote.author}
+                - {quote.author.split(',')[0]}
               </div>
               <div className="flex gap-[40px]">
-                <IoReloadCircleOutline className="cursor-pointer size-8" />
+                <IoReloadCircleOutline
+                  className="cursor-pointer size-8"
+                  onClick={() => {
+                    random();
+                  }}
+                />
                 <FaXTwitter className="cursor-pointer size-8" />
               </div>
             </div>
