@@ -7,21 +7,25 @@ import { FaXTwitter } from "react-icons/fa6";
 const HomeScreen = () => {
   let quotes = [];
 
+  // This is loadQuotes function
   async function loadQuotes() {
     const response = await fetch("https://type.fit/api/quotes");
     quotes = await response.json();
   }
 
+  // Ths is a usestate
   const [quote, setQuote] = useState({
     text: "Self-complacency is fatal to progress.",
     author: "Margaret Sangster",
   });
 
+  // This is random function
   const random = () => {
     const select = quotes[Math.floor(Math.random() * quotes.length)];
     setQuote(select);
   };
 
+  // This is twitter function
   const twitter = () => {
     window.open(
       `https://twitter.com/intent/tweet?text=${quote.text} - ${
@@ -33,6 +37,7 @@ const HomeScreen = () => {
   loadQuotes();
   return (
     <>
+      {/* This is html section */}
       <div className="bg-gray-800 w-screen h-screen text-white flex flex-col justify-center items-center">
         <div className="bg-black w-[310px] lg:w-[800px] bg-opacity-50 rounded-2xl shadow-2xl shadow-blue-800 flex flex-col items-center justify-center m-auto">
           <h1 className="lg:text-3xl text-2xl font-bold mt-5">
@@ -46,12 +51,14 @@ const HomeScreen = () => {
                 - {quote.author.split(",")[0]}
               </div>
               <div className="flex gap-[40px]">
+                {/* This is loading icon */}
                 <IoReloadCircleOutline
                   className="cursor-pointer size-8"
                   onClick={() => {
                     random();
                   }}
                 />
+                {/* this is twitter icon */}
                 <FaXTwitter
                   className="cursor-pointer size-8"
                   onClick={() => {
