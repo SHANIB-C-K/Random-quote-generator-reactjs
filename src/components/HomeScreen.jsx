@@ -1,3 +1,5 @@
+// This is HomeScreen page
+// This is importting section
 import React, { useState } from "react";
 import { IoReloadCircleOutline } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
